@@ -339,7 +339,7 @@ footer a{
 .inner_card1 > img{
     object-fit: cover;
     width: 100%;
-    margin-top: -65%;
+    margin-top: -40%;
 }
 
 .inner_card2{
@@ -384,5 +384,26 @@ footer a{
 .card_buy:hover{
     color: var(--color-accent1);
 }
-
 /* /КАТАЛОГ */
+
+
+/* PRODUCT_PAGE */
+.product{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* SLIDER */
+.slider{
+    position: relative;
+    overflow: hidden;
+    /* margin: 0 20px; */
+    /* max-width: 800px; */
+}
+
+.slider-line{
+    background-color: var(--color-dark);
+    display: flex;
+}
+/* SLIDER */
+/* /PRODUCT_PAGE */
