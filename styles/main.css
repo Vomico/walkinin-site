@@ -339,7 +339,7 @@ footer a{
 .inner_card1 > img{
     object-fit: cover;
     width: 100%;
-    margin-top: -65%;
+    margin-top: -40%;
 }
 
 .inner_card2{
@@ -384,5 +384,139 @@ footer a{
 .card_buy:hover{
     color: var(--color-accent1);
 }
-
 /* /КАТАЛОГ */
+
+
+/* PRODUCT_PAGE */
+.product{
+    display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+}
+
+/* SLIDER */
+.slider{
+    position: relative;
+    overflow: hidden;
+    /* margin: 0 20px; */
+    /* max-width: 800px; */
+    grid-row: 1;
+    aspect-ratio: 1/1;
+    align-self: center;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.slider-line{
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    transition: all 1s;
+}
+
+.slider-btn-prev{
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    background-color: transparent;
+    border: none;
+}
+
+.slider-btn-next{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: rotate(90deg) translateY(-50%);
+    background-color: transparent;
+    border: none;
+}
+
+.slider-wrapper{
+    display: flex;
+    column-gap: 10px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-dot{
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--color-dark);
+    border-radius: 50px;
+}
+
+.slider-dot:hover{
+    background-color: var(--color-accent1);
+}
+
+.active-dot{
+    background-color: var(--color-accent2);
+}
+
+.slider-btn-next img, .slider-btn-prev img{
+    width: 50px;
+}
+
+/* АДАПТИВ */
+/* @media(max-width: 850px){
+    .slider-btn-next img, .slider-btn-prev img{
+        width: calc(20px + (50 - 20) * ((100vw - 320px) / (850 - 320)));
+
+        50 - макс. ширина, которая нам нужна;
+        20, 20px - мин. ширина, которая нам нужна;
+        100vw - полная ширина экрана;
+        320, 320px - мин. разрешение до которого будет уменьш. наше сво-во;
+        850 - разрешение экрана, с уоторого начинает ужиматься наш слайдер
+    }
+
+    .slider-dot{
+        width: calc(10px + (16 - 10) * ((100vw - 320px) / (850 - 320)));
+        height: calc(10px + (16 - 10) * ((100vw - 320px) / (850 - 320)));
+    }
+
+    .slider-wrapper{
+        column-gap: calc(5px + (10 - 5) * ((100vw - 320px) / (850 - 320)));
+    }
+} */
+/* SLIDER */
+
+.product_info{
+    grid-column: 2;
+    display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(4, 1fr);
+}
+
+.product_name{
+    font-size: 2.1rem;
+    grid-row: 1;
+    grid-column: span 2;
+    justify-self: left;
+}
+
+.id{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.count{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.product_description{
+    grid-column: span 2;
+    grid-row: 3;
+}
+
+.price{
+    grid-column: span 2;
+    grid-row: 4;
+    font-size: 2rem;
+}
+
+
+/* /PRODUCT_PAGE */
