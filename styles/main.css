@@ -389,6 +389,7 @@ footer a{
     display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 50px;
+    margin-bottom: 70px;
 }
 
 /* SLIDER */
@@ -515,6 +516,18 @@ footer a{
     font-size: 2rem;
 }
 
+.add-to-cart{
+    font-family: var(--main);   
+    font-size: 1rem;
+    display: block;
+    background-color: var(--color-accent2);
+    color: var(--color-bright);
+    padding: 20px 80px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 /* /PRODUCT_PAGE */
 
 
@@ -531,12 +544,12 @@ input{
     width: 600px;
 }
 
-.login > h1{
+.login > h1, .registr > h1{
     margin-bottom: 50px;
 }
 
-.login > form > button{
-    font-family: var(--main);
+.login > form > button, .registr > form > button{
+    font-family: var(--main);   
     font-size: 1rem;
     display: block;
     margin: 0 auto;
@@ -545,6 +558,7 @@ input{
     padding: 20px 80px;
     border-radius: 20px;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .pre-rig, .pre-login{
@@ -552,3 +566,49 @@ input{
     margin-bottom: 70px;
 }
 /* /ЛОГИН */
+
+
+/* АККАУНТ */
+.account > h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.account > h2{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.account > h3{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.account > p{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.account > p:last-of-type{
+    margin-bottom: 20px;
+}
+
+.account > div{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.account > div > a{
+    font-family: var(--main);   
+    font-size: 1rem;
+    background-color: var(--color-accent2);
+    color: var(--color-bright);
+    padding: 0.4rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* /АККАУНТ */
