@@ -66,43 +66,16 @@
 
 
     <!-- ТЕЛО -->
-    <main>
-        <div class="product">
-            <div class="slider">
-                <div class="slider-line">
-                    <img class="slider-img" src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" alt="" class="slider-img">
-                    <img class="slider-img" src="img/ey54r4xzqge9koq9jwgrxa3bw9gn6me7.jpg" alt="" class="slider-img">
-                    <img class="slider-img" src="img/d30ej6k6zgkbb38e56zekcg4qn4x2qs5.jpg" alt="" class="slider-img">
-                </div>
-
-                <button class="slider-btn-prev">
-                    <img src="img/arrow.svg">
-                </button>
-                <button class="slider-btn-next">
-                    <img src="img/arrow.svg">
-                </button>
-
-                <div class="slider-wrapper">
-                    <div class="slider-dot active-dot"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
-                </div>
-
-                <script src="scripts/slider.js"></script>
-            </div>
-
-            <div class="product_info">
-                <h1 class="product_name" id="product_name">НАЗВАНИЕ ТОВАРА</h1>
-                <p class="id">АРТИКУЛ: <span class="product_id" id="product_id">777</span> </p>
-                <p class="count">В НАЛИЧИИ: <span class="product_count" id="product_count">100</span>ШТ.</p>
-                <p class="price"><span class="product_price" id="product_price">2500</span>₽</p>
-                <p class="product_description" id="product_description">описание описание</p>
-                <form action="" method="post">
-                    <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
-                    <button type="submit" class="add-to-cart">Добавить в корзину</button>
-                </form>
-            </div>
-        </div>
+    <main class="registr">
+        <h1>ВОЙТИ В АККАУНТ</h1>
+        <form action="" method="post">
+            <input type="text" name="nick" id="nick" placeholder="  Никнейм">
+            <input type="email" name="email" id="email" placeholder="   Почта">
+            <input type="password" name="password" id="password" placeholder="  Пароль">
+            <input type="password" name="password_confirm" id="password_confirm" placeholder="  Подтвердите пароль">
+            <button class="button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            <p class="pre-login"><a href="login.html">Уже есть аккаунт?</a></p>
+        </form>
     </main>
     <!-- /ТЕЛО -->
 
