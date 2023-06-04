@@ -151,9 +151,6 @@ main > h1{
 }
 
 main{
-    /* display: flex; */
-    /* justify-content: center; */
-    /* background-color: #fff; */
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -518,5 +515,40 @@ footer a{
     font-size: 2rem;
 }
 
-
 /* /PRODUCT_PAGE */
+
+
+/* ЛОГИН */
+input{
+    display: block;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 50px;
+    width: 600px;
+}
+
+.login > h1{
+    margin-bottom: 50px;
+}
+
+.login > form > button{
+    font-family: var(--main);
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--color-accent2);
+    color: var(--color-bright);
+    padding: 20px 80px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.pre-rig, .pre-login{
+    text-align: center;
+    margin-bottom: 70px;
+}
+/* /ЛОГИН */
