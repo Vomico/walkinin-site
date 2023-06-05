@@ -20,7 +20,7 @@
     <!-- БОШКА -->
     <header>
         <div class="top-header">
-            <a class="icon_btn" href="login.html">
+            <a class="icon_btn" href="login.php">
                 <img class="icon_acc" src="img/account.svg" alt="">
                 <span>КАБИНЕТ</span>
             </a>
@@ -31,7 +31,7 @@
                 <img class="icon_phone" src="img/phone.svg" alt="">
             </a>
 
-            <a class="cart_btn" href="">
+            <a class="cart_btn" href="cart.php">
                 <img class="icon_cart" src="img/cart.svg" alt="">
                 <span>КОРЗИНА</span>
             </a>
@@ -39,22 +39,22 @@
 
 
         <div class="bottom-header">
-            <a class="LOGO" href="index.html">
+            <a class="LOGO" href="index.php">
                 <div class="main_logo" href="">Walkin'in</div>
                 <div class="descr_logo" href="">ОБУВЬ МИРОВЫХ БРЕНДОВ</div>
             </a>
 
             <div class="menu_bg">
             <div class="menu">
-                <a href="male.html" class="menu_btn mens">
+                <a href="male.php" class="menu_btn mens">
                     МУЖЧИНАМ
                 </a>
 
-                <a href="female.html" class="menu_btn womens">
+                <a href="female.php" class="menu_btn womens">
                     ЖЕНЩИНАМ
                 </a>
 
-                <a href="kid.html" class="menu_btn kids">
+                <a href="kid.php" class="menu_btn kids">
                     ДЕТЯМ
                 </a>
             </div>

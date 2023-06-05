@@ -64,44 +64,29 @@
     <!-- БОШКА -->
 
 
-
     <!-- ТЕЛО -->
     <main>
-        <div class="product">
-            <div class="slider">
-                <div class="slider-line">
-                    <img class="slider-img" src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" alt="" class="slider-img">
-                    <img class="slider-img" src="img/ey54r4xzqge9koq9jwgrxa3bw9gn6me7.jpg" alt="" class="slider-img">
-                    <img class="slider-img" src="img/d30ej6k6zgkbb38e56zekcg4qn4x2qs5.jpg" alt="" class="slider-img">
+        <h1>МУЖСКАЯ ОБУВЬ</h1>
+        <div class="cards">
+            <?php
+            $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
+            $sql = "SELECT * FROM products";
+            $result = mysqli_query($conn,$sql);
+            while ($products = mysqli_fetch_assoc($result)){
+            ?>
+            <div class="card" id="c1">
+                <div class="inner_card1">
+                    <img src="<?php echo $males['photo']; ?>" loading="lazy" alt="">
                 </div>
-
-                <button class="slider-btn-prev">
-                    <img src="img/arrow.svg">
-                </button>
-                <button class="slider-btn-next">
-                    <img src="img/arrow.svg">
-                </button>
-
-                <div class="slider-wrapper">
-                    <div class="slider-dot active-dot"></div>
-                    <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
+                <div class="inner_card2">
+                    <h2 class="card_name"><?php echo $males['name']; ?></h2>
+                    <span class="card_price"><?php echo $males['price']?>₽</span>
+                    <a href="product.html" class="card_buy">КУПИТЬ</a>
                 </div>
-
-                <script src="scripts/slider.js"></script>
             </div>
-
-            <div class="product_info">
-                <h1 class="product_name" id="product_name">НАЗВАНИЕ ТОВАРА</h1>
-                <p class="id">АРТИКУЛ: <span class="product_id" id="product_id">777</span> </p>
-                <p class="count">В НАЛИЧИИ: <span class="product_count" id="product_count">100</span>ШТ.</p>
-                <p class="price"><span class="product_price" id="product_price">2500</span>₽</p>
-                <p class="product_description" id="product_description">описание описание</p>
-                <form action="" method="post">
-                    <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
-                    <button type="submit" class="add-to-cart">Добавить в корзину</button>
-                </form>
-            </div>
+            <?php
+            };
+            ?> 
         </div>
     </main>
     <!-- /ТЕЛО -->
