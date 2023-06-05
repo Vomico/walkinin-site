@@ -66,28 +66,28 @@
 
     <!-- ТЕЛО -->
     <main>
-        <h1>МУЖСКАЯ ОБУВЬ</h1>
+        <h1>ЖЕНСКАЯ ОБУВЬ</h1>
         <div class="cards">
-          <div class="card" id="c1"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c2"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c3"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c4"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c5"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c6"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c7"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c8"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c9"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c10"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c11"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c12"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c13"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c14"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c15"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c16"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c17"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c18"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c19"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>
-          <div class="card" id="c20"><div class="inner_card1"><img src="img/0rhz8qksc8w6xbqa5k3p781o5c7gfw15.jpg" loading="lazy" alt=""></div><div class="inner_card2"><h2 class="card_name">name</h2><p class="card_dcp">описанинописаниеописание</p><span class="card_price">price</span><a href="product.html" class="card_buy">КУПИТЬ</a></div></div>  
+            <?php
+            $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
+            $sql = "SELECT * FROM females";
+            $result = mysqli_query($conn,$sql);
+            $table = "female";
+            while ($products = mysqli_fetch_assoc($result)){
+            ?>
+            <div class="card" id="c1">
+                <div class="inner_card1">
+                    <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                </div>
+                <div class="inner_card2">
+                    <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                    <span class="card_price"><?php echo $products['price']?>₽</span>
+                    <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                </div>
+            </div>
+            <?php
+            };
+            ?> 
         </div>
     </main>
     <!-- /ТЕЛО -->

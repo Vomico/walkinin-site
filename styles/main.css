@@ -331,12 +331,15 @@ footer a{
     grid-column: 1;
     justify-self: center;
     overflow:hidden;
+    background-color: var(--color-bright);
 }
 
 .inner_card1 > img{
+    display: block;
     object-fit: cover;
-    width: 100%;
-    margin-top: -37%;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -10%;
 }
 
 .inner_card2{
