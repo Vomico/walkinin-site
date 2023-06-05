@@ -70,18 +70,18 @@
         <div class="cards">
             <?php
             $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
-            $sql = "SELECT * FROM products";
+            $sql = "SELECT * FROM males";
             $result = mysqli_query($conn,$sql);
-            while ($products = mysqli_fetch_assoc($result)){
+            while ($males = mysqli_fetch_assoc($result)){
             ?>
             <div class="card" id="c1">
                 <div class="inner_card1">
-                    <img src="<?php echo $males['photo']; ?>" loading="lazy" alt="">
+                    <img src="<?php echo $males['img1']; ?>" loading="lazy" alt="">
                 </div>
                 <div class="inner_card2">
                     <h2 class="card_name"><?php echo $males['name']; ?></h2>
                     <span class="card_price"><?php echo $males['price']?>₽</span>
-                    <a href="product.html" class="card_buy">КУПИТЬ</a>
+                    <a href=product.php?id=<?php echo $males['id']; ?>" class="card_buy">КУПИТЬ</a>
                 </div>
             </div>
             <?php

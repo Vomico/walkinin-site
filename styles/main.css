@@ -336,7 +336,7 @@ footer a{
 .inner_card1 > img{
     object-fit: cover;
     width: 100%;
-    margin-top: -40%;
+    margin-top: -37%;
 }
 
 .inner_card2{
@@ -345,7 +345,7 @@ footer a{
     grid-row: 2;
     display: grid;
         grid-template-columns: repeat(2, minmax(134px, 152px));
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr auto auto;
         row-gap: 20px;
 }
 
@@ -354,7 +354,9 @@ footer a{
     grid-row: 1;
     justify-self: center;
     color: var(--color-bright);
+    padding: 0 10px;
     padding-top: 10px;
+    text-align: center;
 }
 
 /* .card_dcp{
@@ -369,13 +371,15 @@ footer a{
     grid-row: 2;
     justify-self: center;
     color: var(--color-bright);
+    font-size: 1.3rem;
 }
 
 .card_buy{
     justify-self: center;
-    grid-column: 2;
+    grid-column: span 2;
     grid-row: 3;
     color: var(--color-bright);
+    padding: 10px 20px;
 }
 
 .card_buy:hover{
