@@ -489,7 +489,8 @@ footer a{
     grid-column: 2;
     display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto repeat(4, 1fr);
+        grid-template-rows: auto auto repeat(3, 1fr);
+        row-gap: 20px;
 }
 
 .product_name{
@@ -512,6 +513,7 @@ footer a{
 .product_description{
     grid-column: span 2;
     grid-row: 3;
+    font-size: 1.4rem;
 }
 
 .price{

@@ -72,6 +72,7 @@
             $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
             $sql = "SELECT * FROM males";
             $result = mysqli_query($conn,$sql);
+            $table = "male";
             while ($products = mysqli_fetch_assoc($result)){
             ?>
             <div class="card" id="c1">
@@ -81,7 +82,7 @@
                 <div class="inner_card2">
                     <h2 class="card_name"><?php echo $products['name']; ?></h2>
                     <span class="card_price"><?php echo $products['price']?>₽</span>
-                    <a href=product.php?id=<?php echo $products['id']; ?>" class="card_buy">КУПИТЬ</a>
+                    <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
                 </div>
             </div>
             <?php
