@@ -73,7 +73,7 @@
         $product_id = $_GET['id'];
     
         $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
-        $sql = "SELECT * FROM males WHERE id = $product_id";
+        $sql = "SELECT * FROM products WHERE id = $product_id";
 
         $result = mysqli_query($conn,$sql);
         $product = mysqli_fetch_assoc($result);

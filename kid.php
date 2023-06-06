@@ -70,9 +70,8 @@
         <div class="cards">
             <?php
             $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
-            $sql = "SELECT * FROM kids";
+            $sql = "SELECT * FROM products WHERE tag = 3";
             $result = mysqli_query($conn,$sql);
-            $table = "kid";
             while ($products = mysqli_fetch_assoc($result)){
             ?>
             <div class="card" id="c1">
