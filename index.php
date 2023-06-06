@@ -13,7 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+    
+    <?php
+    $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
+    ?>
 
 </head>
 <body>
@@ -68,130 +71,181 @@
     <!-- ТЕЛО -->
     <main>
         <div class="ads">
-            <div class="game">
-                <h1>ИГРА</h1>
+            <div class="ad">
+                <img src="img/ad.png" alt="">
             </div>
-            <div class="trends"></div>
-            <div class="trends"></div>
-            <div class="trends"></div>
-            <div class="trends"></div>
-            <div class="trends"></div>
-            <div class="trends"></div>
+            <?php
+                $sql = "SELECT * FROM products WHERE tag = 1 ORDER BY id DESC LIMIT 6";
+                $result = mysqli_query($conn,$sql);
+                while ($products = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="trend">
+                    <div class="inner_trend1">
+                        <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                    </div>
+                    <div class="inner_trend2">
+                        <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                        <span class="card_price"><?php echo $products['price']?>₽</span>
+                        <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                    </div>
+                </div>
+                <?php
+                };
+                ?>
         </div>
 
         <div class="new">
             <span>НОВЫЕ ПОСТАВКИ:</span>
             <div class="prew_con">
-                <div class="prew">
-
+                <!-- ПОСЛЕДНЕЕ МУЖСКОЕ -->
+                <?php
+                $sql = "SELECT * FROM products WHERE tag = 1 ORDER BY id DESC LIMIT 2";
+                $result = mysqli_query($conn,$sql);
+                while ($products = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="card">
+                    <div class="inner_card1">
+                        <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                    </div>
+                    <div class="inner_card2">
+                        <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                        <span class="card_price"><?php echo $products['price']?>₽</span>
+                        <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                    </div>
                 </div>
+                <?php
+                };
+                ?>
 
-                <div class="prew">
-
+                <!-- ПОСЛЕДНЕЕ ЖЕНСКОЕ -->
+                <?php
+                $sql = "SELECT * FROM products WHERE tag = 2 ORDER BY id DESC LIMIT 2";
+                $result = mysqli_query($conn,$sql);
+                while ($products = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="card">
+                    <div class="inner_card1">
+                        <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                    </div>
+                    <div class="inner_card2">
+                        <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                        <span class="card_price"><?php echo $products['price']?>₽</span>
+                        <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                    </div>
                 </div>
+                <?php
+                };
+                ?>
 
-                <div class="prew">
-
+                <!-- ПОСЛЕДНЕЕ ДЕТСКОЕ -->
+                <?php
+                $sql = "SELECT * FROM products WHERE tag = 3 ORDER BY id DESC LIMIT 1";
+                $result = mysqli_query($conn,$sql);
+                while ($products = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="card">
+                    <div class="inner_card1">
+                        <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                    </div>
+                    <div class="inner_card2">
+                        <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                        <span class="card_price"><?php echo $products['price']?>₽</span>
+                        <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                    </div>
                 </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
+                <?php
+                };
+                ?>
             </div>
         </div>
 
         <div class="male_prew">
             <span>МУЖСКАЯ ОБУВЬ:</span>
             <div class="prew_con">
-                <div class="prew">
-
+                <?php
+                $sql = "SELECT * FROM products WHERE tag = 1 LIMIT 4";
+                $result = mysqli_query($conn,$sql);
+                while ($products = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="card">
+                    <div class="inner_card1">
+                        <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                    </div>
+                    <div class="inner_card2">
+                        <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                        <span class="card_price"><?php echo $products['price']?>₽</span>
+                        <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                    </div>
                 </div>
+                <?php
+                };
+                ?>
 
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
+                <a href="male.php" class="card">
+                    <div class="link_btn">
+                        <div>ЕЩЁ БОЛЬШЕ ТОВАРОВ-></div>
+                    </div>
+                </a>
             </div>
         </div>
 
         <div class="female_prew">
             <span>ЖЕНСКАЯ ОБУВЬ:</span>
             <div class="prew_con">
-                <div class="prew">
-
+                <?php
+                $sql = "SELECT * FROM products WHERE tag = 2 LIMIT 4";
+                $result = mysqli_query($conn,$sql);
+                while ($products = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="card">
+                    <div class="inner_card1">
+                        <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                    </div>
+                    <div class="inner_card2">
+                        <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                        <span class="card_price"><?php echo $products['price']?>₽</span>
+                        <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                    </div>
                 </div>
+                <?php
+                };
+                ?>
 
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
+                <a href="female.php" class="card">
+                    <div class="link_btn">
+                        <div>ЕЩЁ БОЛЬШЕ ТОВАРОВ-></div>
+                    </div>
+                </a>
             </div>
         </div>
 
         <div class="kid_prew">
             <span>ДЕТСКАЯ ОБУВЬ:</span>
             <div class="prew_con">
-                <div class="prew">
-
+                <?php
+                $sql = "SELECT * FROM products WHERE tag = 3 LIMIT 4";
+                $result = mysqli_query($conn,$sql);
+                while ($products = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="card">
+                    <div class="inner_card1">
+                        <img src="<?php echo $products['img1']; ?>" loading="lazy" alt="">
+                    </div>
+                    <div class="inner_card2">
+                        <h2 class="card_name"><?php echo $products['name']; ?></h2>
+                        <span class="card_price"><?php echo $products['price']?>₽</span>
+                        <a href="product.php?id=<?php echo $products['id'];?>" class="card_buy">КУПИТЬ</a>
+                    </div>
                 </div>
+                <?php
+                };
+                ?>
 
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
-
-                <div class="prew">
-
-                </div>
+                <a href="kid.php" class="card">
+                    <div class="link_btn">
+                        <div>ЕЩЁ БОЛЬШЕ ТОВАРОВ-></div>
+                    </div>
+                </a>
             </div>
         </div>
     </main>
