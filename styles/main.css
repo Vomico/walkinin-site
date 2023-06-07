@@ -278,6 +278,10 @@ footer a{
     align-self: center;
     margin: 0 auto;
 }
+
+.new > span, .male_prew > span, .female_prew > span, .kid_prew > span{
+    font-size: 1.5rem;
+}
 /* /NEW */
 /* /ТЕЛО */
 /* /ГЛАВНАЯ СТРАНИЦА */
@@ -610,6 +614,18 @@ input{
 .pre-rig, .pre-login{
     text-align: center;
     margin-bottom: 70px;
+}
+
+.msg{
+    text-decoration: underline;
+    text-align: center;
+    border: 2px solid var(--color-dark);
+    background-color: var(--color-accent2);
+    color: var(--color-bright);
+    border-radius: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    padding: 10px 25px;
 }
 /* /ЛОГИН */
 

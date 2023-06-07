@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <?php
+    session_start();
     $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
     ?>
 

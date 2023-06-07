@@ -15,6 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 
+    <?php
+    session_start(); 
+    if(isset($_SESSION['user'])){header('Location: account.php');}
+    ?>
+
+
 </head>
 <body>
     <!-- БОШКА -->
@@ -68,9 +74,13 @@
     <!-- ТЕЛО -->
     <main class="login">
         <h1>ВОЙТИ В АККАУНТ</h1>
-        <form action="" method="post">
+        <form action="auth.php" method="post">
             <input type="email" name="email" id="email" placeholder="   Почта">
             <input type="password" name="password" id="password" placeholder="  Пароль">
+            <?php 
+                if(isset($_SESSION['message'])){echo '<p class="msg">' .$_SESSION['message'].'</p>';}
+                unset($_SESSION['message']);
+            ?>
             <button class="button">ВОЙТИ</button>
             <p class="pre-rig"><a href="registr.html">Нет аккаунта?</a></p>
         </form>

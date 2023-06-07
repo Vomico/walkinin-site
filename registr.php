@@ -69,7 +69,7 @@
     <main class="registr">
         <h1>ВОЙТИ В АККАУНТ</h1>
         <form action="" method="post">
-            <input type="text" name="nick" id="nick" placeholder="  Никнейм">
+            <input type="text" name="name" id="name" placeholder="  Никнейм">
             <input type="email" name="email" id="email" placeholder="   Почта">
             <input type="password" name="password" id="password" placeholder="  Пароль">
             <input type="password" name="password_confirm" id="password_confirm" placeholder="  Подтвердите пароль">
