@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 06 2023 г., 23:52
+-- Время создания: Июн 08 2023 г., 00:26
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -105,6 +105,28 @@ INSERT INTO `products` (`id`, `tag`, `name`, `price`, `count`, `img1`, `img2`, `
 (59, 1, 'Тимберленды QUATTROCOMFORTO 336-22', '3899.99', 100, 'img/males/19/1.jpg', 'img/males/19/2.jpg', 'img/males/19/3.jpg', 'Высокие теплые мужские ботинки тимберленды Quattrocomforto для активного отдыха. Мужские кроссовки данной модели противостоят влаге и обеспечивают надежное сцепление со скользкой поверхностью в любое время года благодаря рифленому протектору на подошве.'),
 (60, 1, 'Слипоны Pulse 58-31MV-860T', '3799.99', 35, 'img/males/20/1.jpg', 'img/males/20/2.jpg', 'img/males/20/3.jpg', '');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(36) COLLATE utf8mb4_general_ci NOT NULL,
+  `promo` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `promo`) VALUES
+(1, 'Vomico', 'example@mail.ru', '123', 1),
+(2, 'Александр', 'mega.alex31@gmail.com', '123', 1);
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -116,6 +138,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -124,6 +152,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
