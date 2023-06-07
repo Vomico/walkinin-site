@@ -8,7 +8,7 @@
 
     $query3 = mysqli_query($connect, "SELECT * FROM users WHERE `email`='$email'");
     if(mysqli_num_rows($query3)>0){
-        $_SESSION['message'] = 'Аккаунт с такой почтой уже существует';
+        $_SESSION['message'] = '!!!Аккаунт с такой почтой уже существует!!!';
         header("Location: registr.php");
         exit();
     }
