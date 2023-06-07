@@ -14,7 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-
+    <?php
+        session_start();
+    ?>
 </head>
 <body>
     <!-- БОШКА -->
@@ -68,14 +70,18 @@
     <!-- ТЕЛО -->
     <main class="registr">
         <h1>ВОЙТИ В АККАУНТ</h1>
-        <form action="" method="post">
+        <form action="reg.php" method="post">
             <input type="text" name="name" id="name" placeholder="  Никнейм">
             <input type="email" name="email" id="email" placeholder="   Почта">
             <input type="password" name="password" id="password" placeholder="  Пароль">
             <input type="password" name="password_confirm" id="password_confirm" placeholder="  Подтвердите пароль">
             <button class="button">ЗАРЕГИСТРИРОВАТЬСЯ</button>
-            <p class="pre-login"><a href="login.html">Уже есть аккаунт?</a></p>
+            <?php 
+                if(isset($_SESSION['message'])){echo '<p class="msg">' .$_SESSION['message'].'</p>';}
+                unset($_SESSION['message']);
+            ?>
         </form>
+        <p class="pre-login"><a href="login.html">Уже есть аккаунт?</a></p>
     </main>
     <!-- /ТЕЛО -->
 

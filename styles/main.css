@@ -616,6 +616,10 @@ input{
     margin-bottom: 70px;
 }
 
+.pre-rig > a:hover, .pre-login > a:hover{
+    text-decoration: underline;
+}
+
 .msg{
     text-decoration: underline;
     text-align: center;
