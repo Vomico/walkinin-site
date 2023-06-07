@@ -18,6 +18,6 @@
     }
     else{
         $_SESSION['message']= 'Неверно указаны почта или пароль';
-        header("Location: auth.php");
+        header("Location: login.php");
     }
 ?>

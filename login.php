@@ -77,13 +77,13 @@
         <form action="auth.php" method="post">
             <input type="email" name="email" id="email" placeholder="   Почта">
             <input type="password" name="password" id="password" placeholder="  Пароль">
+            <button class="button">ВОЙТИ</button>
             <?php 
                 if(isset($_SESSION['message'])){echo '<p class="msg">' .$_SESSION['message'].'</p>';}
                 unset($_SESSION['message']);
             ?>
-            <button class="button">ВОЙТИ</button>
-            <p class="pre-rig"><a href="registr.html">Нет аккаунта?</a></p>
         </form>
+        <p class="pre-rig"><a href="registr.php">Нет аккаунта?</a></p>
     </main>
     <!-- /ТЕЛО -->
 

@@ -72,7 +72,7 @@
     <main>
         <div class="account">
             <h1>ЛИЧНЫЙ КАБИНЕТ</h1>
-            <h2>Добро пожаловать в Ваш личный кабинет, <?= $_SESSION['user']['name'] ?></h2>
+            <h2>Добро пожаловать в Ваш личный кабинет, <?= $_SESSION['user']['name'] ?>.</h2>
             <h3>Вам доступна скидка в 10%!</h3>
             <p class="user_info">Имя: <?= $_SESSION['user']['name'] ?> (<?= $_SESSION['user']['id'] ?>)</p>
             <p class="user_info">Почта: <?= $_SESSION['user']['email'] ?></p>
