@@ -80,7 +80,7 @@
                 unset($_SESSION['message']);
             ?>
         </form>
-        <p class="pre-login"><a href="login.html">Уже есть аккаунт?</a></p>
+        <p class="pre-login"><a href="login.php">Уже есть аккаунт?</a></p>
     </main>
     <!-- /ТЕЛО -->
 
