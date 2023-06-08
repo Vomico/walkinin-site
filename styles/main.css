@@ -4,6 +4,7 @@
     --color-accent1: #d3d3d3;
     --color-accent2: #4d4d4d;
     --color-main-background: #F9EADC;
+    --color-warning: #e08181;
     --main: 'Roboto', sans-serif;
     --title: 'Kalam', cursive;
 }
@@ -627,7 +628,7 @@ input{
     text-align: center;
     border: 2px solid var(--color-dark);
     background-color: var(--color-accent2);
-    color: #d39393;
+    color: var(--color-warning);
     border-radius: 15px;
     font-size: 1.2rem;
     margin-bottom: 40px;
@@ -680,3 +681,103 @@ input{
     cursor: pointer;
 }
 /* /АККАУНТ */
+
+/* CART */
+.korz{
+    text-align: center;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    margin: 20vh auto;
+    color: var(--color-warning);
+}
+
+.cart-container{
+    display: grid;
+        grid-template-columns: repeat(1, 1200px);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        grid-row-gap: 40px;
+    justify-content: center;
+}
+
+.cart{
+    display: grid;
+        grid-template-columns: 450px 1fr auto;
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 20px;
+    border: var(--color-accent2) 3px solid;
+    border-radius: 10px;
+    background-color: var(--color-accent1);
+}
+
+.cart:last-of-type{
+    margin-bottom: 50px;
+}
+
+.cart > img{
+    object-fit: cover;
+    width: 100%;
+    grid-column: 1;
+    grid-row: span 2;
+    border-radius: 10px;
+    border: var(--color-accent2) 1px solid;
+}
+
+.product-name{
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.4rem;
+    text-align: center;
+    align-self: center;
+    color: var(--color-dark);
+}
+
+.product-price{
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 1.5rem;
+    text-align: center;
+    align-self: center;
+    color: var(--color-dark);
+}
+
+.del{
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 2rem;
+    background-color: var(--color-accent2);
+    color: var(--color-bright);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.del:hover{
+    background-color: var(--color-dark);
+}
+
+.itog{
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+}
+
+.cart-total{
+    grid-column: 1;
+    font-size: 1.4rem;
+    margin-bottom: 70px;
+}
+
+.zak{
+    font-size: 1.5rem;
+    grid-column: 2;
+    text-decoration: underline;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.zak:hover{
+    text-decoration: none;
+}
+
+/* /CART */

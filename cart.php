@@ -70,6 +70,8 @@
 
     <!-- ТЕЛО -->
     <main>
+        <div class="cart-container">
+
         <?php
             $total = 0;
             foreach ($_SESSION['cart'] as $id => $product) {
@@ -88,36 +90,36 @@
                 $promocode_status = 0;
             };
         ?>
-
-        <div class="cart-container">
+            
                 <?php if (empty($_SESSION['cart'])) : ?>
-                <p class="korz">Ваша корзина пуста</p>
+                <p class="korz">Ваша корзина пуста!</p>
                 <?php else : ?>
                 <?php foreach ($_SESSION['cart'] as $id => $product) : ?>
-                <div class="cart-item">
+            <div class="cart">
                 <img src="<?php echo $product['img1']; ?>" alt="<?php echo $product['name']; ?>">
                 <div class="product-name"><?php echo $product['name']; ?></div>
                 <div class="product-price"><?php echo $product['price'] * $product['count']; ?> руб.</div>
                 <form method="post" action="remove-from-cart.php">
                     <input type="hidden" name="product_id" value="<?php echo $id; ?>">
-                    <button class="del"  type="submit">Удалить</button>
+                    <button class="del"  type="submit">X</button>
                 </form>
-        </div>
-
+            </div>
         <?php endforeach; ?>
-
-        <?php
-        if ($promocode_status) {
-            echo '<div class="cart-total">Общая сумма со скидкой: ' . ($total * 0.85) . ' руб.</div>';
-        } else {
-            echo '<div class="cart-total">Общая сумма: ' . $total . ' руб.</div>';
-        }
-        ?>
-
-        <?php endif; ?>
-        <div class="zak">
-            <a href="index.php" class="zakazat">Заказать</a>
         </div>
+        <div class="itog">         
+            <?php
+            if ($promocode_status) {
+                echo '<div class="cart-total">Общая сумма со скидкой: ' . ($total * 0.90) . ' руб.</div>';
+            } else {
+                echo '<div class="cart-total">Общая сумма: ' . $total . ' руб.</div>';
+            }
+            ?>
+
+            <?php endif; 
+            if (!empty($_SESSION['cart'])) : ?>
+            <a href="index.php" class="zak">Заказать</a>
+        </div>   
+        <?php endif;?>
     </main>
     <!-- /ТЕЛО -->
 
