@@ -68,7 +68,7 @@
 
     <!-- ТЕЛО -->
     <main class="registr">
-        <h1>ВОЙТИ В АККАУНТ</h1>
+        <h1>РЕГИСТРАЦИЯ</h1>
         <form action="reg.php" method="post">
             <input type="text" name="name" id="name" placeholder="  Никнейм">
             <input type="email" name="email" id="email" placeholder="   Почта">
