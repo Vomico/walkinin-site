@@ -70,7 +70,54 @@
 
     <!-- ТЕЛО -->
     <main>
-        
+        <?php
+            $total = 0;
+            foreach ($_SESSION['cart'] as $id => $product) {
+                $total += $product['price'] * $product['count'];
+            }
+            $connect = mysqli_connect('localhost', 'root', '', 'walkinin_db');
+            if (isset($_SESSION['user'])) {
+                $user_id = $_SESSION['user']['id'];
+                $query = "SELECT promo FROM users WHERE id = $user_id";
+                $result = mysqli_query($connect, $query);
+                if ($result && mysqli_num_rows($result) > 0) {
+                    $promocode_status = mysqli_fetch_assoc($result)['promo'];
+                }
+                mysqli_close($connect);
+            } else {
+                $promocode_status = 0;
+            };
+        ?>
+
+        <div class="cart-container">
+                <?php if (empty($_SESSION['cart'])) : ?>
+                <p class="korz">Ваша корзина пуста</p>
+                <?php else : ?>
+                <?php foreach ($_SESSION['cart'] as $id => $product) : ?>
+                <div class="cart-item">
+                <img src="<?php echo $product['img1']; ?>" alt="<?php echo $product['name']; ?>">
+                <div class="product-name"><?php echo $product['name']; ?></div>
+                <div class="product-price"><?php echo $product['price'] * $product['count']; ?> руб.</div>
+                <form method="post" action="remove-from-cart.php">
+                    <input type="hidden" name="product_id" value="<?php echo $id; ?>">
+                    <button class="del"  type="submit">Удалить</button>
+                </form>
+        </div>
+
+        <?php endforeach; ?>
+
+        <?php
+        if ($promocode_status) {
+            echo '<div class="cart-total">Общая сумма со скидкой: ' . ($total * 0.85) . ' руб.</div>';
+        } else {
+            echo '<div class="cart-total">Общая сумма: ' . $total . ' руб.</div>';
+        }
+        ?>
+
+        <?php endif; ?>
+        <div class="zak">
+            <a href="index.php" class="zakazat">Заказать</a>
+        </div>
     </main>
     <!-- /ТЕЛО -->
 
