@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <!-- БОШКА -->
@@ -68,14 +70,7 @@
 
     <!-- ТЕЛО -->
     <main>
-        <div class="account">
-            <h1>ЛИЧНЫЙ КАБИНЕТ</h1>
-            <h2>Добро пожаловать в Ваш личный кабинет, <?= $_SESSION['user']['name'] ?>.</h2>
-            <h3>Вам доступна скидка в 10%!</h3>
-            <p class="user_info">Имя: <?= $_SESSION['user']['name'] ?> (id:<?= $_SESSION['user']['id'] ?>)</p>
-            <p class="user_info">Почта: <?= $_SESSION['user']['email'] ?></p>
-            <div><a href="exit.php">ВЫЙТИ ИЗ АККАУНТА</a></div>
-        </div>
+        
     </main>
     <!-- /ТЕЛО -->
 

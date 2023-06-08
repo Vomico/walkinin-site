@@ -1,11 +1,11 @@
 <?php
-    $connect = mysqli_connect('localhost','root','','walkinin_db');;
     session_start();
+    $conn = mysqli_connect('localhost','root','','walkinin_db');;
 
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $query1 = mysqli_query($connect, "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password'");
+    $query1 = mysqli_query($conn, "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password'");
     if (mysqli_num_rows($query1)>0){
         $user = mysqli_fetch_assoc($query1);
         $_SESSION['user'] = [

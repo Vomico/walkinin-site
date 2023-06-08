@@ -1,3 +1,7 @@
+<?php
+    session_start(); 
+    if(isset($_SESSION['user'])){header('Location: account.php');}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,14 +17,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-    <?php
-    session_start(); 
-    if(isset($_SESSION['user'])){header('Location: account.php');}
-    ?>
-
-
 </head>
 <body>
     <!-- БОШКА -->

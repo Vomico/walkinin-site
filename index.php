@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
+?>
 <!DOCTYPE html>
 <html id="ind" lang="ru">
 <head>
@@ -14,11 +18,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <?php
-    session_start();
-    $conn = mysqli_connect('localhost','root','','walkinin_db') or die('Ошибка');
-    ?>
-
 </head>
 <body>
     <!-- БОШКА -->
@@ -76,7 +75,8 @@
                 <img src="img/ad.png" alt="">
             </div>
             <?php
-                $sql = "SELECT * FROM products WHERE tag = 1 ORDER BY id DESC LIMIT 6";
+                // $sql = "SELECT * FROM products WHERE tag = 1 ORDER BY id DESC LIMIT 6";
+                $sql = "SELECT * FROM products ORDER BY RAND() LIMIT 6";
                 $result = mysqli_query($conn,$sql);
                 while ($products = mysqli_fetch_assoc($result)){
                 ?>
